@@ -3,7 +3,7 @@ import kotlin.system.exitProcess
 class Game(val dealer: Dealer, val player: Player) {
     var gameOver = false
 
-    init {
+    fun startGame() {
         while (!gameOver) {
             println("Type \"quit\" to leave.")
             println("-------------------------------------------------------------------")

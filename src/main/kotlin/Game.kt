@@ -39,10 +39,12 @@ class Game(val dealer: Dealer, val player: Player){
         }
     }
 
+    //check if a player is bust
     fun isBust(hand: MutableList<Card>): Boolean{
         return getSum(hand) > 21
     }
 
+    //calculates total sum of cards in a hand
     fun getSum(hand : MutableList<Card>): Int{
         var sum = 0
         var hasAce = false

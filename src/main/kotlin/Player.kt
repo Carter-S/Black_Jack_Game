@@ -3,11 +3,13 @@ import org.jetbrains.annotations.Nullable
 class Player(val name: String){
     var hand = mutableListOf<Card>()
 
+    //players move
     fun playerMove(): String{
         printHand()
         return twistOrStick()
     }
 
+    //player chooses to keep current cards or draw one more
     private fun twistOrStick(): String{
         var validAnswer = false
         var answer = ""
@@ -22,7 +24,7 @@ class Player(val name: String){
         }
         return answer
     }
-
+    //prints players hand
     private fun printHand(){
         println("Your cards are:")
         hand.forEach {

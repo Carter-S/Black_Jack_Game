@@ -1,17 +1,17 @@
-class Deck{
+class Deck {
     private val suits = listOf("Diamonds", "Hearts", "Spades", "Clubs")
     private val values = listOf("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K")
     val cards = mutableListOf<Card>()
 
-    init{
+    init {
         fillDeck()
         shuffleDeck()
     }
 
     //Populates deck with cards
-    private fun fillDeck(){
-        for(i in 0..3){
-            for(j in 0..12){
+    private fun fillDeck() {
+        for (i in 0..3) {
+            for (j in 0..12) {
                 val card = Card(values[j], suits[i])
                 cards.add(card)
             }
@@ -19,10 +19,9 @@ class Deck{
     }
 
     //Shuffles deck
-    private fun shuffleDeck(){
+    private fun shuffleDeck() {
         cards.shuffle()
     }
-
 }
 
 class Card(val value: String, val suit: String);

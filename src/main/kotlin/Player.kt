@@ -1,5 +1,6 @@
 class Player(val name: String) {
     var hand = mutableListOf<Card>()
+    var score = 0
 
     //players move
     fun playerMove(): String {
@@ -21,6 +22,11 @@ class Player(val name: String) {
             }
         }
         return answer
+    }
+
+    //adds to player score
+    fun addScore(){
+        score ++
     }
 
     //prints players hand

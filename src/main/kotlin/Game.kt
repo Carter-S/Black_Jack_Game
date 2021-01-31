@@ -33,7 +33,8 @@ class Game(val dealer: Dealer, val player: Player) {
                 println("You lost.")
                 dealer.printHand()
             } else {
-                println("You win, dealer went bust.")
+                player.addScore()
+                println("You win ${player.name}, dealer went bust. Your score is ${player.score}.")
                 dealer.printHand()
             }
             dealer.clearHands(player)
